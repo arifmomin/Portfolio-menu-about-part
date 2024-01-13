@@ -1,0 +1,374 @@
+/* ======================font link start=================== */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
+/* --------------------font link end---------------------- */
+/* =======================common css start===================== */
+*{
+    padding: 0%;
+    margin: 0%;
+    outline: 0;
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style: none;
+}
+h1,h2,h3,h4,h5,h6,p,ul,ol{
+    padding: 0%;
+    margin: 0%;
+    outline: 0;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+/* ----------------------common css end----------------------- */
+/* ======================css veriable part start==================== */
+:root{
+    --IBM_Plex-serif:'IBM Plex Serif', serif;
+    --Croissant_one:'Croissant One', serif;
+    --Background_color:#212428;
+    --Brand_color:#FFB400;
+    --paragraph:#C4CFDE;
+}
+/* ----------------------css veriable part end-------------------- */
+/* ========================menu part start==================== */
+.menu_bar{
+    height: 100px;
+    background: linear-gradient(95deg, #1E2024 0%, #23272B 100%) !important;
+    box-shadow: 10px 10px 19px #1C1E22;
+    padding: 0% !important;
+}
+.menu_logo{
+    width: 120px !important;
+    height: 80px !important;
+}
+.menu_bar .menu_list{
+    gap: 35px;
+}
+.menu_list .nav-item .nav-link {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: var(--IBM_Plex-serif);
+    color: #fff !important;
+    position: relative;
+    padding: 0% !important;
+    z-index: 999;
+    transition: all linear .3s;
+}
+.menu_list .nav-item .nav-link:hover{
+    color: var(--Brand_color) !important;
+}
+.nav-link span{
+    font-size: 16px;
+    color: #fff;
+}
+.menu_list .nav-item .nav-link:hover span{
+    color: var(--Brand_color);
+}
+.menu_bar ul li .after::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 0px;
+    background: var(--Brand_color);
+    border-radius: 5px;
+    top: -100%;
+    left: 0%;
+    padding: 0%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all linear .3s;
+} 
+.menu_bar ul li .after:hover::before{
+    height: 2px;
+    visibility: visible;
+    opacity: 1;
+}
+.menu_bar ul li .after::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 0px;
+    background: linear-gradient(rgb(255 255 255 / 17%), rgb(255 255 255 / 0%));
+    top: -97%;
+    left: 0%;
+    padding: 0%;
+    clip-path: polygon(30% 0, 70% 0, 100% 100%, 0% 100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all linear .4s;
+    z-index: -1;
+}
+.menu_bar ul li .after:hover:after{
+    height: 45px;
+    opacity: 1;
+    visibility: visible;
+}
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0px;
+    vertical-align: none;
+    content: "\f107";
+    border-top: none;
+    border-right: none;
+    border-bottom: 0;
+    border-left: none;
+} 
+.dropdown-item {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--IBM_Plex-serif);
+    color: #fff;
+}
+.dropdown-menu {
+    --bs-dropdown-link-active-color: #000000 !important;
+    --bs-dropdown-link-active-bg: #ffffff;
+    --bs-dropdown-bg: #212428;
+    --bs-dropdown-link-hover-color: #ffffff;
+    --bs-dropdown-link-hover-bg: #FFB400;
+}
+.dropdown-menu[data-bs-popper] {
+    left: -18px;
+}
+.menu_button a{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--IBM_Plex-serif);
+    color: #fff;
+    width: 150px;
+    height: 50px;
+    border-radius: 12px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all linear .4s;
+    background: linear-gradient(145deg, #1e2024, #23272b);
+   box-shadow:  10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;;
+}
+.menu_button a:hover{
+    color: var(--Brand_color);
+    transform: translateY(-3px);
+}
+.menu_button a::before {
+    content: "";
+    position: absolute;
+    transition: all linear .4s;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right bottom, #212428, #16181c);
+    opacity: 0;
+    z-index: -1;
+}
+.menu_button a:hover:before{
+    opacity: 1;
+}
+
+/* ------------------------menu part end--------------------- */
+/* ========================banner part start==================== */
+#banner_part{
+    padding-top: 100px;
+    padding-bottom: 70px;
+    background: var(--Background_color);
+}
+
+.banner_heading h2{
+    font-size: 18px;
+    font-weight: 400;
+    font-family: var(--IBM_Plex-serif);
+    color: var(--paragraph);
+}
+.banner_heading h1 {
+    width: 630px;
+    font-size: 64px;
+    font-weight: 700;
+    font-family: var(--Croissant_one);
+    color: #fff;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+.banner_heading h1 span{
+    color: var(--Brand_color);
+}
+.banner_heading{
+    position: relative;
+}
+.word {
+    width: 600px;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    margin: auto;
+    color: var(--Brand_color);
+    font-size: 58px;
+    font-weight: 700;
+    font-family: var(--Croissant_one);
+}
+.banner_heading p{
+    width: 630px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--IBM_Plex-serif);
+    color: var(--paragraph);
+    margin-top: 25px;
+    margin-bottom: 100px;
+}
+.banner_heading .banner_icon_list h3{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--IBM_Plex-serif);
+    color: var(--paragraph);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.banner_icon_list ul{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.banner_icon_list ul li a{
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all linear .3s;
+    background: linear-gradient(145deg, #1E2024 0%, #23272B 100%);
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+}
+.banner_icon_list ul li a:hover{
+    transform: translateY(-3px);
+    background: linear-gradient(to right bottom, #212428, #16181c);
+}
+.banner_icon_list ul li a i{
+    font-size: 22px;
+    color: var(--Brand_color);
+    transition: all linear .3s;
+}
+.banner_img{
+    display: flex;
+    justify-content: end;
+}
+.banner_img img{
+    width: 420px !important;
+    height: 510px !important;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border: 10px solid var(--Brand_color);
+}
+/* ------------------------banner part end--------------------- */
+/* ========================about part start==================== */
+#about{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: var(--Background_color);
+}
+.about_heading h2{
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--Croissant_one);
+    color: #fff;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.about_heading h2 span{
+    color: var(--Brand_color);
+}
+#about .info{
+    font-size: 26px;
+    font-weight: 700;
+    font-family: var(--IBM_Plex-serif);
+    color: #fff;
+    margin-bottom: 30px;
+}
+.about_list{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+.about_list ul li{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: var(--IBM_Plex-serif);
+    color: var(--paragraph);
+    margin-top: 15px;
+}
+.about_list .highlight{
+    color: var(--Brand_color);
+}
+
+.about_list ul li span{
+    margin-left: 12px;
+    font-weight: 600;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    transition: all linear .3s;
+}
+.about_list ul li span:hover{
+    color: var(--Brand_color);
+}
+.about_list ul li span::after {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 1px;
+    background: var(--Brand_color);
+    bottom: -10%;
+    right: 0%;
+    visibility: hidden;
+    transition: all linear .3s;
+}
+.about_list ul li span:hover::after{
+    width: 100%;
+    visibility: visible;
+}
+.counter_row{
+
+}
+.counter_col{
+    width: 250px;
+    padding: 25px 52px 38px 45px;
+    background: linear-gradient(145deg, #1E2024 0%, #23272B 100%);
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+}
+.counter_col h3{
+    font-size: 64px;
+    font-weight: 700;
+    font-family: var(--IBM_Plex-serif);
+    color: var(--Brand_color);
+}
+
+
+
+
+
+
+
+
+
+
+/* ------------------------about part end--------------------- */
+/* ========================menu part start==================== */
+
+/* ------------------------menu part end--------------------- */
+/* ========================menu part start==================== */
+
+/* ------------------------menu part end--------------------- */
+/* ========================menu part start==================== */
+
+/* ------------------------menu part end--------------------- */
+/* ========================menu part start==================== */
+
+/* ------------------------menu part end--------------------- */
+/* ========================menu part start==================== */
+
+/* ------------------------menu part end--------------------- */
+/* ========================menu part start==================== */
+
+/* ------------------------menu part end--------------------- */
