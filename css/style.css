@@ -1,6 +1,7 @@
 /* ======================font link start=================== */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@100;200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 /* --------------------font link end---------------------- */
 /* =======================common css start===================== */
 *{
@@ -26,6 +27,7 @@ a{
 :root{
     --IBM_Plex-serif:'IBM Plex Serif', serif;
     --Croissant_one:'Croissant One', serif;
+    --poopins:'Poppins', sans-serif;
     --Background_color:#212428;
     --Brand_color:#FFB400;
     --paragraph:#C4CFDE;
@@ -274,12 +276,12 @@ a{
     font-family: var(--Croissant_one);
     color: #fff;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 .about_heading h2 span{
     color: var(--Brand_color);
 }
-#about .info{
+.about_col h3{
     font-size: 26px;
     font-weight: 700;
     font-family: var(--IBM_Plex-serif);
@@ -328,20 +330,262 @@ a{
     width: 100%;
     visibility: visible;
 }
-.counter_row{
 
+.download_button .btn_slide{
+    width: 230px;
+    height: 60px;
+    border-radius: 30px;
+    border: 3px solid var(--Brand_color);
+    background: transparent;
+    position: relative;
+    transition: all linear .3s;
+    margin-top: 60px;
 }
-.counter_col{
-    width: 250px;
-    padding: 25px 52px 38px 45px;
+.download_button .btn_slide:hover{
+    background: var(--Brand_color);
+}
+.btn_slide .circle {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 47px !important;
+    height: 47px;
+    background: var(--Brand_color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+    transition: all linear .4s;
+}
+.download_button .btn_slide:hover .circle{
+    left: 174px;
+    background: #fff;
+    color: var(--Brand_color);
+}
+.btn_slide .title {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: var(--IBM_Plex-serif);
+    color: #fff;
+    line-height: 52px;
+    margin-left: 90px;
+    transition: all linear .3s;
+}
+.download_button .btn_slide:hover .title{
+    margin-left: 80px;
+    opacity: 0;
+}
+.btn_slide .title_hover {
+    position: absolute;
+    top: 0%;
+    left: 43%;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: var(--IBM_Plex-serif);
+    color: #fff;
+    line-height: 52px;
+    opacity: 0;
+    transition: all linear .3s;
+}
+.download_button .btn_slide:hover .title_hover{
+    left: 19%;
+    opacity: 1;
+}
+.counter_row{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.counter_col {
+    width: 280px;
+    padding: 25px 40px 38px 45px;
+    border-radius: 10px;
     background: linear-gradient(145deg, #1E2024 0%, #23272B 100%);
     box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+    transition: all linear .3s;
+}
+.counter_col:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(to right bottom, #212428, #16181c);
 }
 .counter_col h3{
     font-size: 64px;
     font-weight: 700;
     font-family: var(--IBM_Plex-serif);
+    color: #fff;
+    transition: all linear .3s;
+}
+.counter_col:hover h3{
     color: var(--Brand_color);
+}
+.counter_col p{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--IBM_Plex-serif);
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 85px;
+    position: relative;
+}
+.counter_col p::after {
+    position: absolute;
+    content: '';
+    width: 45px;
+    height: 1px;
+    background: #fff;
+    top: 23%;
+    left: -70%;
+}
+/* ------------------------about part end--------------------- */
+/* ========================resume part start==================== */
+#resume{
+    padding-top: 50px;
+    padding-bottom: 500px;
+    background: var(--Background_color);
+    color: #fff;
+}
+.resume_heading h2{
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--Croissant_one);
+    color: #fff;
+    margin-bottom: 80px;
+    text-align: center;
+}
+.resume_heading h2 span{
+    color: var(--Brand_color);
+}
+.nav-tabs {
+    --bs-nav-tabs-border-width: none; 
+    border-bottom: none;
+    background: linear-gradient(#1E2024 , #23272B);
+    box-shadow: 10px 10px 19px #1C1E22, -10px -10px 19px #262A2E;
+    border-radius: 10px;
+    height: 70px;
+}
+.nav-tabs .nav-link {
+    width: 25%;
+    border-radius: 10px;
+}
+.nav-link {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: var(--IBM_Plex-serif);
+    color: var(--paragraph);
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    background: linear-gradient(#1E2024 , #23272B);
+    box-shadow: 10px 10px 19px #1C1E22, -10px -10px 19px #262A2E;
+    color: var(--Brand_color);
+}
+.nav-link:focus, .nav-link:hover {
+    box-shadow: 10px 10px 19px #1C1E22, -10px -10px 19px #262A2E;
+    color: var(--Brand_color);
+}
+.resume_row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.resume_col .resume_heading h3{
+    font-size: 26px;
+    font-weight: 500;
+    font-family: var(--Croissant_one);
+    color: #fff;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+.resume_div{
+    width: 5px;
+    height: 516px;
+    background: #17191C;
+}
+.resume_box_row{
+    display: flex;
+    align-items: start;
+    gap: 24px;
+}
+.resume_box_col{
+    width: 500px;
+    padding: 40px 25px 30px 30px;
+    background: linear-gradient(#1E2024 , #23272B);
+    box-shadow: 10px 10px 19px #1C1E22, -10px -10px 19px #262A2E;
+    margin-bottom: 40px;
+    transition: all linear 4s;
+    position: relative;
+
+}
+.resume_box_col:hover{
+    background: linear-gradient(to right bottom, #212428, #16181c);
+}
+.resume_box_col::after {
+    position: absolute;
+    content: '';
+    width: 18px;
+    height: 5px;
+    top: 22%;
+    left: -18px;
+    background: #17191C;
+}
+.resume_box_col::before {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 44px;
+    left: -36.5px;
+    background: var(--Background_color);
+    border: 5px solid #17191C;
+    transition: all linear .3s;
+}
+.resume_box_col:hover::before{
+    background: var(--Brand_color);
+}
+.reasume_box_heading_row{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.reasume_box_heading_row .box_heading_col h4{
+    font-size: 20px;
+    font-weight: 500;
+    font-family: var(--IBM_Plex-serif);
+    color: #fff;
+}
+.reasume_box_heading_row .box_heading_col h5{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--poopins);
+    color: var(--paragraph);
+    margin-top: 15px;
+}
+.box_heading_col .gpa{
+    width: 60px;
+    height: 35px;
+    border-radius: 3px;
+    background: linear-gradient(#1E2024 , #23272B);
+    box-shadow: 10px 10px 19px #1C1E22, -10px -10px 10px #262A2E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: var(--IBM_Plex-serif);
+    color: var(--Brand_color);
+}
+.resume_box_heading p{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--poopins);
+    color: var(--paragraph);
+    margin-top: 40px;
+    width: 445px;
 }
 
 
@@ -353,10 +597,10 @@ a{
 
 
 
-/* ------------------------about part end--------------------- */
-/* ========================menu part start==================== */
 
-/* ------------------------menu part end--------------------- */
+
+
+/* ------------------------resume part end--------------------- */
 /* ========================menu part start==================== */
 
 /* ------------------------menu part end--------------------- */

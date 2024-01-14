@@ -44,3 +44,8 @@ var wordflick = function () {
 $(document).ready(function () {
   wordflick();
 });
+
+$('.counter').counterUp({
+    delay: 10,
+    time: 2000,
+  });
